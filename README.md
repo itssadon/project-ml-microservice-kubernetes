@@ -1,6 +1,6 @@
 
 # Operationalizing a Machine Learning Microservice API
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/itssadon/project-ml-microservice-kubernetes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/itssadon/project-ml-microservice-kubernetes/tree/main)
 
 ## Project Overview
 
