@@ -24,6 +24,15 @@ The Operationalize ML project contains a Machine Learning Microservice, built on
 - Python 3.7.x
 - Docker
 - Hadolint
+  - On Mac 
+  ```bash
+  brew install hadolint
+  ```
+
+  - On Windows, you can use [scoop](https://github.com/lukesampson/scoop) to install hadolint.
+  ```bash
+  scoop install hadolint
+  ```
 - Kubernetes (Minikube)
 
 ---
