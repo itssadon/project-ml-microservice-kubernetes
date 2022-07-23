@@ -1,5 +1,7 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/itssadon/project-ml-microservice-kubernetes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/itssadon/project-ml-microservice-kubernetes/tree/main)
 
+---
+
 ## Project Overview
 
 In this project, I have applied the skills I have acquired in the course to operationalize a Machine Learning Microservice API. 
