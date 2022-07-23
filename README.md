@@ -25,6 +25,13 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
+## Requirements
+
+- Python 3.7.x
+- Docker
+- Hadolint
+- Kubernetes (Minikube)
+
 ## Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
