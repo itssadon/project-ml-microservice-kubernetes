@@ -1,3 +1,5 @@
+
+# Operationalizing a Machine Learning Microservice API
 <include a CircleCI status badge, here>
 
 ## Project Overview
@@ -48,5 +50,3 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
-# project-ml-microservice-kubernetes
-# project-ml-microservice-kubernetes
