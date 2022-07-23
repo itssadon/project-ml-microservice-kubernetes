@@ -8,6 +8,7 @@ In this project, I have applied the skills I have acquired in the course to oper
 
 The Operationalize ML project contains a Machine Learning Microservice, built on **Scikit-Learn**. It contains a model that predicts house prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). 
 
+---
 
 ## What does this project do?
 
@@ -78,3 +79,5 @@ make lint
 ```bash
 ./run_kubernetes.sh
 ```
+
+---
