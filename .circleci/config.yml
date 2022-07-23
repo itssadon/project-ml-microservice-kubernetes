@@ -2,11 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
-version: 2.1
-executors:
-  docker:
-    docker:
-      - image: docker:stable
+version: 2
 jobs:
   build:
     docker:
@@ -37,32 +33,16 @@ jobs:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
-      # run tests!
       - run:
           name: run tests
           command: |
             . venv/bin/activate
             make test
-  lint:
-    executor: docker
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - setup_remote_docker
       - run:
           name: Run hadolint
-          command: docker run --rm --interactive hadolint/hadolint < Dockerfile
-
-workflows:
-  version: 2
-  project-ml:
-    jobs:
-      - lint
-      - build:
-          requires:
-            - lint
+          command: |
+            . venv/bin/activate
+            make test
+            sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+            sudo chmod +x /bin/hadolint
+            make lint
