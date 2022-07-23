@@ -33,6 +33,12 @@ The Operationalize ML project contains a Machine Learning Microservice, built on
   ```bash
   scoop install hadolint
   ```
+
+  - On linux, you can use [scoop](https://github.com/lukesampson/scoop) to install hadolint.
+  ```bash
+  wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+  chmod +x /bin/hadolint
+  ```
 - Kubernetes (Minikube)
 
 ---
