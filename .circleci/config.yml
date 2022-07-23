@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
-version: 2
+version: 2.1
 executors:
   docker:
     docker:
@@ -33,9 +33,6 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             make install
-            # Install hadolint
-            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
-            chmod +x /bin/hadolint
       - save_cache:
           paths:
             - ./venv
@@ -60,3 +57,12 @@ jobs:
       - run:
           name: Run hadolint
           command: docker run --rm --interactive hadolint/hadolint < Dockerfile
+
+workflows:
+  version: 2
+  project-ml:
+    jobs:
+      - lint
+      - build:
+          requires:
+            - lint
